@@ -1,0 +1,1 @@
+export const GUESSES_ALLOWED = 6;
