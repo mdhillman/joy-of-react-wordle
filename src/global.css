@@ -4,15 +4,22 @@
   --spacingM: 6px;
   --spacingL: 8px;
   --spacingXL: 12px;
+  --spacingXXL: 20px;
+
+  --color-gray-100: hsl(0deg 0% 10%);
+  --color-gray-300: hsl(0deg 0% 25%);
+  --color-gray-500: hsl(0deg 0% 50%);
+  --color-gray-700: hsl(0deg 0% 75%);
+  --color-gray-900: hsl(0deg 0% 90%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text01: #e1e1e1;
 
-    --highlight01: #7a437a;
-    --highlight02: #895788;
-    --highlight03: #976b96;
+    --highlight01: var(--color-gray-300);
+    --highlight02: var(--color-gray-500);
+    --highlight03: var(--color-gray-700);
 
     --background01: #121212;
     --background02: #282828;

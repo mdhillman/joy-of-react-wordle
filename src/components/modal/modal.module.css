@@ -1,0 +1,12 @@
+.modal {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border: 2px solid red;
+}
+
+.modal h2 {
+
+}
