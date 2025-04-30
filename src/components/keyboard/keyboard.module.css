@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--background03);
+    border-radius: 0.6rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    justify-content: center;
+}
+
+.button {
+    margin: var(--spacingXS);
+    flex-shrink: 1;
+
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    background-color: var(--background02);
+    color: var(--text01);
+    border: none;
+    border-radius: 0.4rem;
+    border-bottom: 2px solid var(--background01);
+}
+
+.button:hover {
+    background-color: var(--background01);
+    border-bottom: 2px solid var(--background04);
+}
+
+button:global(.active),
+.button:active {
+    background-color: var(--background01);
+    border-bottom: 2px solid var(--background04);
+}

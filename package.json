@@ -7,13 +7,15 @@
     "eslint": "^8.57.1",
     "parcel": "^2.14.4",
     "prettier": "^3.5.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-scripts": "^5.0.1"
+    "react": "^18.3.1",
+    "react-confetti-explosion": "^2.1.2",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "react-spring": "^9.7.5"
   },
   "scripts": {
-    "start": "parcel public/index.html",
-    "build": "parcel build public/index.html"
+    "start": "parcel public/index.html --port 2345",
+    "build": "parcel build public/index.html --no-cache"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }

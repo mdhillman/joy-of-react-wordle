@@ -1,6 +1,11 @@
 import {GAME_TITLE} from "../../constants";
 import * as styles from "./header.module.css";
 
+/**
+ * Title component
+ *
+ * @param onInfoClick callback for info icon
+ */
 function Header({ onInfoClick }) {
     return (
         <header className={styles.header}>
