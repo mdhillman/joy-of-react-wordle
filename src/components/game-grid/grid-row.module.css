@@ -4,7 +4,7 @@
     justify-content: center;
     margin: var(--spacingL) 0;
     width: 100%;
-    height: 1.75rem;
+    height: 5rem;
 }
 
 .error div {
@@ -18,4 +18,10 @@
     50% { transform: translateX(-4px) }
     75% { transform: translateX(4px) }
     100% { transform: translateX(0) }
+}
+
+@media (max-width: 800px) {
+    .row {
+        height: 2.75rem;
+    }
 }
