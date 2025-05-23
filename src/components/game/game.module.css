@@ -22,7 +22,7 @@
     color: indianred;
     margin-top: auto;
     margin-bottom: var(--spacingL);
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -51,6 +51,9 @@
     }
 
     .success {
+        font-size: 1rem;
+    }
+    .error {
         font-size: 1rem;
     }
 }

@@ -17,11 +17,11 @@ const ALLOWED_KEYS = [13, 8, 46, ...range(65, 91)];
  *
  * @param onPress callback for key press event
  */
-function Keyboard({ onPress }) {
+function Keyboard({ onPress, missingChars }) {
     const [activeButtons, setActiveButtons] = useState([]);
 
     const keyHandler = (e) => {
-        if (!onPress) return;
+        if (!onPress || missingChars.includes(e)) return;
         if (!ALLOWED_KEYS.includes(e.keyCode)) return;
 
         const key = e.key.toUpperCase();
@@ -37,7 +37,7 @@ function Keyboard({ onPress }) {
     });
 
     useEffect(() => {
-        const interval = setTimeout(() => {
+        setTimeout(() => {
             if (activeButtons.length > 0) {
                 setActiveButtons((prev) => prev.slice(1));
             }
@@ -58,6 +58,7 @@ function Keyboard({ onPress }) {
                                     key={`keyboard-button-${key}`}
                                     className={classNames}
                                     onClick={() => onPress(key)}
+                                    disabled={missingChars.includes(key)}
                                 >
                                     {key}
                                 </button>

@@ -35,6 +35,11 @@
     border-bottom: 2px solid var(--background04);
 }
 
+.button:disabled {
+    color: var(--highlight03);
+    background: var(--highlight02);
+}
+
 button:global(.active),
 .button:active {
     background-color: var(--background01);

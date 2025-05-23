@@ -1,6 +1,6 @@
 import styles from "./game.module.css";
 import Header from "../header/header";
-import {useState} from "react";
+import {useMemo, useState} from "react";
 import Modal from "../modal/modal";
 import Grid from "../game-grid/grid";
 import Keyboard from "../keyboard/keyboard";
@@ -25,6 +25,20 @@ function Game() {
     const [isExploding, setIsExploding] = useState(false);
 
     const googleLink = `http://www.google.com/search?ie=UTF-8&q=${TARGET_WORD}+meaning`;
+
+    const missingChars = useMemo(() => {
+        const targetLetters = new Set(TARGET_WORD.split(''));
+        const uniqueGuessedLetters = new Set();
+
+        guesses.forEach(guess => {
+            for (const char of guess) {
+                if (!targetLetters.has(char)) {
+                    uniqueGuessedLetters.add(char);
+                }
+            }
+        });
+        return Array.from(uniqueGuessedLetters);
+    }, [guesses]);
 
     const onKeyPress = (key) => {
         if(infoVisible) return;
@@ -96,13 +110,13 @@ function Game() {
             )}
             {gameEnded === false && (
                 <span className={styles.error}>
-                    You're out of guesses, the word was <a href={googleLink} target="_blank">{TARGET_WORD}</a>. Refresh and try again!
+                    You're out of guesses, the word was <a href={googleLink} target="_blank" rel="noreferrer">{TARGET_WORD}</a>. Refresh and try again!
                 </span>
             )}
 
             {/* Keyboard controls */}
             <div className={styles.keyboard}>
-                <Keyboard onPress={infoVisible ? null : onKeyPress}/>
+                <Keyboard onPress={infoVisible ? null : onKeyPress} missingChars={missingChars} />
             </div>
 
             {isExploding && <ConfettiExplosion

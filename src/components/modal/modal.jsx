@@ -15,7 +15,7 @@ function Modal({setVisibility}) {
     }
 
     return (
-        <dialog className={styles.dialog}>
+        <dialog className={styles.dialog} onClick={() => {setVisibility(false)}}>
 
             {/* Modal element */}
             <div className={styles.modal}>
