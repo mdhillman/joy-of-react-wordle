@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/joy-of-react-wordle/static/css/main.f57d30e6.css",
+    "main.js": "/joy-of-react-wordle/static/js/main.99df87fa.js",
+    "static/media/sample-dark.png": "/joy-of-react-wordle/static/media/sample-dark.878477297d9340c7e995.png",
+    "static/media/sample-light.png": "/joy-of-react-wordle/static/media/sample-light.0e6a72d806d5215b01fb.png",
+    "index.html": "/joy-of-react-wordle/index.html",
+    "main.f57d30e6.css.map": "/joy-of-react-wordle/static/css/main.f57d30e6.css.map",
+    "main.99df87fa.js.map": "/joy-of-react-wordle/static/js/main.99df87fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f57d30e6.css",
+    "static/js/main.99df87fa.js"
+  ]
+}
