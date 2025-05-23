@@ -7,6 +7,7 @@ import Keyboard from "../keyboard/keyboard";
 import {ALLOWED_WORDS} from "../../word-list";
 import {GUESSES_ALLOWED} from "../../constants";
 import ConfettiExplosion from 'react-confetti-explosion';
+import ClipboardButton from "./clipboard-button";
 
 const TARGET_WORD = ALLOWED_WORDS[Math.floor(Math.random() * ALLOWED_WORDS.length)].toUpperCase();
 console.log("The target word is below, but it's a secret!");
@@ -86,9 +87,12 @@ function Game() {
             {/* Information text */}
             <span className={styles.error}>{pendingError}</span>
             {gameEnded && (
-                <span className={styles.success}>
-                    You've completed this edition of <span style={{fontFamily: '"Bokor", system-ui'}}>Legally Distinct Word</span> game, congratulations!
-                </span>
+                <>
+                    <span className={styles.success}>
+                        You've completed this edition of <span style={{fontFamily: '"Bokor", system-ui'}}>Legally Distinct Word</span> game, congratulations!
+                    </span>
+                    <ClipboardButton guesses={[...guesses, pendingGuess]} target={TARGET_WORD}/>
+                </>
             )}
             {gameEnded === false && (
                 <span className={styles.error}>

@@ -31,7 +31,7 @@
     color: darkolivegreen;
     margin-top: auto;
     margin-bottom: var(--spacingL);
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -48,5 +48,9 @@
 @media (max-width: 800px) {
     .keyboard {
         height: 6rem;
+    }
+
+    .success {
+        font-size: 1rem;
     }
 }
