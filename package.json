@@ -6,22 +6,21 @@
   "homepage": "https://mdhillman/joy-of-react-wordle/",
   "dependencies": {
     "eslint": "^8.57.1",
-    "parcel": "^2.14.4",
     "prettier": "^3.5.3",
     "react": "^18.3.1",
     "react-confetti-explosion": "^2.1.2",
     "react-dom": "^18.3.1",
-    "react-scripts": "^5.0.1",
     "react-spring": "^9.7.5"
   },
   "scripts": {
-    "start": "parcel public/index.html --port 2345",
-    "build": "parcel build public/index.html --no-cache",
-    "predeploy": "parcel build public/index.html --no-cache",
-    "deploy": "gh-pages -d dist"
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "react-scripts": "^5.0.1"
   }
 }

@@ -1,4 +1,4 @@
-import * as styles from './grid-row.module.css';
+import styles from './grid-row.module.css';
 import GridCell from "./grid-cell";
 
 /**

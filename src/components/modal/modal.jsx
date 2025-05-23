@@ -1,7 +1,8 @@
-import * as styles from "./modal.module.css";
+import styles from "./modal.module.css";
 import {GUESSES_ALLOWED} from "../../constants";
-import sampleImageDark from "url:/public/images/sample-dark.png";
-import sampleImageLight from "url:/public/images/sample-light.png";
+import sampleImageDark from "./sample-dark.png";
+import sampleImageLight from "./sample-light.png";
+
 /**
  * Information modal.
  *
@@ -44,11 +45,11 @@ function Modal({setVisibility}) {
                     </li>
                 </ul>
 
-                <img src={sampleImage}/>
+                <img src={sampleImage} alt='sample-image'/>
 
                 <p>
-                    This game was created by Michael Hillman as an exercise within the <a href="https://courses.joshwcomeau.com/joy-of-react/" target="_blank">Joy of React course</a>,
-                    you can see the source code for it on GitHub <a href="https://github.com/mdhillman/joy-of-react-wordle" target="_blank">here</a>.
+                    This game was created by Michael Hillman as an exercise within the <a href="https://courses.joshwcomeau.com/joy-of-react/" target="_blank" rel="noreferrer">Joy of React course</a>,
+                    you can see the source code for it on GitHub <a href="https://github.com/mdhillman/joy-of-react-wordle" target="_blank" rel="noreferrer">here</a>.
                 </p>
             </div>
         </dialog>

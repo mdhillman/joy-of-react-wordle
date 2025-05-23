@@ -1,4 +1,4 @@
-import * as styles from "./clipboard-button.module.css";
+import styles from "./clipboard-button.module.css";
 
 const EXACT_EMOJI = '🟩';
 const PARTIAL_EMOJI = '🟨';

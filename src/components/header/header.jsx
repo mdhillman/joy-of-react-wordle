@@ -1,5 +1,5 @@
 import {GAME_TITLE} from "../../constants";
-import * as styles from "./header.module.css";
+import styles from "./header.module.css";
 
 /**
  * Title component

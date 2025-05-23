@@ -1,4 +1,4 @@
-import * as styles from './grid-cell.module.css';
+import styles from './grid-cell.module.css';
 
 /**
  * Component for a single grid cell.

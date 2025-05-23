@@ -1,6 +1,6 @@
-import * as styles from "./game.module.css";
+import styles from "./game.module.css";
 import Header from "../header/header";
-import {useCallback, useRef, useState} from "react";
+import {useState} from "react";
 import Modal from "../modal/modal";
 import Grid from "../game-grid/grid";
 import Keyboard from "../keyboard/keyboard";

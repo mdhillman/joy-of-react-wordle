@@ -1,4 +1,4 @@
-import * as styles from "./keyboard.module.css";
+import styles from "./keyboard.module.css";
 import { useEffect, useState } from "react";
 import { range } from "../../utils";
 

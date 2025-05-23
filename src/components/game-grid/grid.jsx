@@ -1,4 +1,4 @@
-import * as styles from "./grid.module.css";
+import styles from "./grid.module.css";
 import GridRow from "./grid-row";
 import {GUESSES_ALLOWED} from "../../constants";
 
