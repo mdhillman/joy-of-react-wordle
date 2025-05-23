@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Michael Hillman",
+  "homepage": "https://mdhillman/joy-of-react-wordle/",
   "dependencies": {
     "eslint": "^8.57.1",
     "parcel": "^2.14.4",
@@ -15,7 +16,12 @@
   },
   "scripts": {
     "start": "parcel public/index.html --port 2345",
-    "build": "parcel build public/index.html --no-cache"
+    "build": "parcel build public/index.html --no-cache",
+    "predeploy": "parcel build public/index.html --no-cache",
+    "deploy": "gh-pages -d dist"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
