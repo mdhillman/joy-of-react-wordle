@@ -1,0 +1,36 @@
+.cell {
+    height: 100%;
+    aspect-ratio: 1;
+    margin: 0 var(--spacingM);
+
+    border-radius: 0.6rem;
+    align-content: center;
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.active {
+    border: 3px solid var(--text01);
+}
+
+.none {
+    background: var(--background04);
+    border: 3px solid var(--background04);
+}
+.partial {
+    background: #bf9223;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+.exact {
+    background: #667943;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 800px) {
+    .cell {
+        font-size: 1rem;
+    }
+}

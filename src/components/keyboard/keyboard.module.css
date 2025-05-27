@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--background03);
+    border-radius: 0.6rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    width: 100%;
+    justify-content: center;
+}
+
+.button {
+    aspect-ratio: 1/1;
+    margin: var(--spacingXS);
+    flex-shrink: 1;
+
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    background-color: var(--background02);
+    color: var(--text01);
+    border: none;
+    border-radius: 0.4rem;
+    border-bottom: 2px solid var(--background01);
+}
+
+.button:hover {
+    background-color: var(--background01);
+    border-bottom: 2px solid var(--background04);
+}
+
+.button:disabled {
+    color: var(--highlight03);
+    background: var(--highlight02);
+}
+
+button:global(.active),
+.button:active {
+    background-color: var(--background01);
+    border-bottom: 2px solid var(--background04);
+}
+
+@media (max-width: 800px) {
+    .button {
+        font-size: 1rem;
+        aspect-ratio: unset;
+    }
+}
